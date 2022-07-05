@@ -1,25 +1,29 @@
-<div class="container my-5 mx-auto">
+<div class="container my-5 ">
     <div class="row">
-        <div class="col-md-6 mx-auto">
+        <div class="col-md-4 mx-auto">
             <a class="btn btn-primary d-inline" href="/">Back</a>
             <br>
             <br>
             <div class="card">
+                <img class="card-img-top" src="/upload/images/<%= student.photo %> " alt="">
                 <div class="card-body">
-                    <h1>Add New Student</h1>
-                    <hr>
-                    <form action="/api/student" method="post" enctype="multipart/form-data">
+                    <form action="/api/student/<%= student._id %> " method="post" enctype="multipart/form-data">
                         <p class="my-2">
                             <label for="">Name</label>
-                            <input name="name" type="text" class="form-control">
+                            <input value="<%= student.name %>" name="name" type="text" class="form-control">
                         </p>
+                        <input type="hidden" name="_mathod" value="PATCH">
                         <p class="my-2">
                             <label for="">Email</label>
-                            <input name="email" type="email" class="form-control">
+                            <input value="<%= student.email %>" name="email" type="email" class="form-control">
                         </p>
                         <p class="my-2">
                             <label for="">Cell</label>
-                            <input name="cell" type="tel" class="form-control">
+                            <input value="<%= student.cell %>" name="cell" type="tel" class="form-control">
+                        </p>
+                        <p class="my-2">
+                            <input name="old_photo" value="<%= student.photo %>" type="hidden">
+                        </p>
                         </p>
                         <p class="my-2">
                             <label for="">Photo</label>

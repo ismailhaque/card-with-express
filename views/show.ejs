@@ -1,0 +1,18 @@
+<div class="container my-5 ">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <a class="btn btn-primary d-inline" href="/">Back</a>
+            <br>
+            <br>
+            <div class="card">
+                <img class="card-img-top" src="/upload/images/<%= student.photo %> " alt="">
+                <div class="card-body">
+                    <h3><%= student.name %> </h3>
+                    <p><%= student.email %> </p>
+                    <p><%= student.cell %></p>
+                    <a href="/edit/<%= student._id%>" class="btn btn-sm btn-info w-100">Edit</a>
+                </div> %> 
+            </div>
+        </div>
+    </div>
+</div>
